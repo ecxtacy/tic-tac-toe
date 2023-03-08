@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+:root {
+  --board-width: 402px;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+.flex {
+  display: flex;
+}
+
+.gameboard-container {
+
+}
+
+.gameboard {
+  /* margin: calc((100vh - var(--board-width)) / 2) auto; */
+  margin: 70px auto;
+  width: var(--board-width);
+  height: var(--board-width);
+
+  border: 1px solid black;
+
+  display: grid;
+  grid-template: repeat(3, calc((var(--board-width)) / 3)) / repeat(3, calc((var(--board-width)) / 3));
+  /* border-radius: 10px; */
+}
+
+.box {
+
+  border: 1px solid black;
+
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 110px;
+
+  font-weight: 200;
+
+  /* border-radius: 10px; */
+
+}
+
+
+.option-container {
+  height: 210px;
+  width: min(400px, 100%);
+  margin: 0 auto;
+  flex-direction: row;
+}
+
+.option-container > * {
+  border: 1px solid black; 
+  flex: 1;
+  padding: 10px 30px;
+  
+}
+
+.options {
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 0 40px;
+}
+
+.player-chance {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  margin-top: 20px;
+}
+
+.player-chance > * {
+  /* border: 2px solid red;
+  gap: 0.4rem; */
+
+}
+
+
+.chance-select {
+  font-size: 32px;
+}
+.btn-choose {
+  display: flex;
+  /* flex:1;   */
+  justify-content: space-evenly;
+}
+
+.btn-choose > button {
+  padding: 3px 28px;
+  border: none;
+  border-radius: 5px;
+
+  background-color: lightskyblue;
+  font-size:28px ;
+}
+.btn-choose > button:hover {
+  background-color: rgb(87, 179, 236);
+}
+
+button {
+  border:none;
+  padding: 3px 25px;
+  font-size: 25px;
+  border-radius: 5px;
+
+  background-color: rgb(241, 174, 58);
+  color: white;
+}
+
+button:hover {
+  background-color: rgb(255, 103, 27);
+}
+
+
+.btn-choose > button.selected {
+  padding: 3px 28px;
+  border: none;
+  border-radius: 5px;
+
+  background-color: rgb(100, 239, 100);
+  font-size:28px ;
+}
+
+.btn-choose > button.selected:hover {
+  background-color: rgb(100, 239, 100);
+}
+
+
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.607);
+  position: absolute;
+  top:0;
+  z-index: 2;
+
+  display: none;
+}
+
+.modal-container2 {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.607);
+  position: absolute;
+  top:0;
+  z-index: 2;
+
+  display: none;
+}
+
+/* testing ... */
+
+.modal-container:first-child {
+  display: block;
+}
+
+.playagain-modal {
+    width:410px;
+    height: 275px;
+
+    margin: calc((100vh - 275px) / 2) auto;
+
+    background-color: pink;
+    z-index: 5;
+    opacity: 1;
+    border:2px solid black;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 2% 0;
+}
+
+.start-modal {
+    width:510px;
+    height: 320px;
+
+    margin: calc((100vh - 340px) / 2) auto;
+
+    background-color: rgb(255, 193, 50);
+    z-index: 5;
+    opacity: 1;
+    border:2px solid black;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 2% 0;
+}
+
+.dis-style {
+  text-align: center;
+  font-size: 23px;
+}
+
+button:active {
+  background-color: rgb(205, 81, 19);
+}
+
+.winbox {
+  background-color: rgb(228, 255, 73);
+  transition:0.5s ease-in-out;
+}
